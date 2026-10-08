@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b1325">
+  <title>Arunika Remote • Controller</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <div class="symbol">A<span>✦</span></div>
+      <div><div class="eyebrow">PRIVATE REMOTE ACCESS</div><h1>Arunika <b>Remote</b></h1></div>
+      <span id="network" class="tag off">Offline</span>
+    </header>
+    <section class="connect-panel" id="connectPanel">
+      <div class="label">Hubungkan pengendali</div>
+      <p>Masukkan <b>KODE AKSES</b> milikmu. Dapatkan kode dari aplikasi Arunika Remote pada Redmi.</p>
+      <form id="connectForm">
+        <label for="key">Kunci akses</label>
+        <input id="key" type="password" autocomplete="off" spellcheck="false" placeholder="32 karakter kode privat" required minlength="32" maxlength="32">
+        <button type="submit" id="connectBtn">Hubungkan iPhone</button>
+      </form>
+      <div id="loginError" class="error" role="alert"></div>
+    </section>
+    <section class="device-panel">
+      <div class="device-head"><span><span class="pulse" id="pulse"></span><strong>Redmi Note 10 Pro</strong></span><span id="connectionText">Belum terhubung</span></div>
+      <div class="frame-wrap" id="frameWrap">
+        <div class="empty" id="empty"><span class="empty-icon">▣</span><strong>Menunggu tampilan Android</strong><small>Pastikan Arunika dan Tailscale aktif di Redmi, lalu hubungkan iPhone.</small></div>
+        <img id="screen" alt="Layar Android jarak jauh" draggable="false" hidden>
+      </div>
+      <div class="small-note" id="frameStats">Tampilan diperbarui berkala • tahan dan geser untuk swipe</div>
+      <div class="toolbar">
+        <button class="tool" data-action="back" type="button"><span>←</span>Back</button>
+        <button class="tool" data-action="home" type="button"><span>⌂</span>Home</button>
+        <button class="tool" data-action="recents" type="button"><span>▢</span>Recent</button>
+        <button class="tool" data-action="notifications" type="button"><span>▤</span>Notif</button>
+      </div>
+      <div class="footnote">Koneksi privat melalui Tailscale. Tidak dapat melewati PIN / sidik jari atau menangkap konten yang dilindungi.</div>
+    </section>
+    <footer><span>ARUNIKA REMOTE • NO HOSTING 0.2</span><button id="disconnect" class="disconnect" type="button">Putuskan sesi</button></footer>
+  </main>
+</body>
+</html>

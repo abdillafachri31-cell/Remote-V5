@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Arunika Remote</string>
+    <string name="accessibility_description">Mengambil gambar layar dan menjalankan ketukan atau gestur atas persetujuan pemilik perangkat untuk sesi remote pribadi. Aktif hanya saat diaktifkan secara manual melalui aplikasi; tampilkan notifikasi kontrol jarak jauh.</string>
+</resources>
